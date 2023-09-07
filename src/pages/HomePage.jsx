@@ -5,7 +5,7 @@ import NoteList from "../components/NoteList";
 import SearchBar from "../components/SearchBar";
 import { getActiveNotes } from "../utils/local-data";
 import { Link } from "react-router-dom";
-import { FiPlusCircle } from "react-icons/fi";
+import AddButton from "../components/AddButton";
 
 function HomePageWrapper() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -54,7 +54,7 @@ class HomePage extends React.Component {
         <NoteList notes={notes} />
         <div className="homepage__action">
           <Link to="/notes/new">
-            <FiPlusCircle size={55} />
+            <AddButton />
           </Link>
         </div>
       </section>
